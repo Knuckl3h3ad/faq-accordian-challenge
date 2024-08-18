@@ -1,0 +1,113 @@
+.work-sans-all {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-pink: hsl(275, 100%, 97%);
+    --grayish-purple: hsl(292, 16%, 49%);
+    --dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+    background-color: var(--light-pink);
+    background-image: url(assets/images/background-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: "Work Sans", sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content;
+    justify-content: center;
+}
+
+img, svg {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    border: 0;
+}
+
+button:hover {
+    color: purple;
+}
+
+.container {
+    background-color: var(--white);
+    max-width: 580px;
+    padding: 1.5rem;
+    margin: 1rem;
+    margin-top: 180px;
+    border-radius: 1rem;
+}
+
+.headline {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.headline h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-purple);
+}
+
+
+
+.accordion-container .accordion-item:not(:last-child) {
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--light-pink);
+}
+
+.accordion-item .icons img {
+    min-width: 30px;
+}
+
+.accordion-item .icons .minus-icon {
+    display: none;
+}
+
+.accordion-desc {
+    background-color: var(--white);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 200ms ease;
+}
+
+.accordion-desc p {
+    color: var(--grayish-purple);
+    padding: 1.5rem 0;
+}
+
+@media (max-width: 540px) {
+    body {
+        transition: max-height 200ms ease;
+        background-image: url(assets/images/background-pattern-mobile.svg);
+    }
+    .headline h1 {
+        font-size: 2rem;
+    }
+    .headline img {
+        width: 2rem;
+    }
+}
