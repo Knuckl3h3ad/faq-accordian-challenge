@@ -6,7 +6,7 @@ This is a solution to the [FAQ Accordion challenge on Frontend Mentor](https://w
 
 ### Screenshot
 
-(depracated, will re-add soon)
+![](./assets/images/desktop-design.png)
 
 ### Links
 
